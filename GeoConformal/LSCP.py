@@ -59,7 +59,9 @@ class LSCP:
         return sorted_indices
 
     def _fit_qrf(self, y, x):
-        return RandomForestQuantileRegressor(n_jobs=8).fit(x, y)
+        qrf = RandomForestQuantileRegressor(n_jobs=8)
+        qrf.fit(x, y)
+        return qrf
 
     def _generate_diff_dataset(self, nonconformity_scores):
         y_list = []

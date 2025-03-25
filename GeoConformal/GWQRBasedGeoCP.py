@@ -9,7 +9,7 @@ from joblib import Parallel, delayed
 from tqdm import tqdm
 
 
-class GWQRBasedGeoConformalSpatialPrediction:
+class GWQRBasedGeoConformalSpatialRegression:
     def __init__(self,
                  predict_f: Callable, nonconformity_score_f: Callable = None,
                  k: int = 10, miscoverage_level: float = 0.1, beta: float = 0.01, alpha: float = 1,
